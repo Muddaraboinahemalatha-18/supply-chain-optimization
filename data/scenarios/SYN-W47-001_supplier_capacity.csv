@@ -1,0 +1,4 @@
+scenario_id,supplier_id,sku_id,capacity_week,maximum_quantity,unit_of_measure,source_type
+SYN-W47-001,SUP001,SKU001,2026-W47,100,Kg,SYNTHETIC
+SYN-W47-001,SUP002,SKU003,2026-W47,100,Kg,SYNTHETIC
+SYN-W47-001,SUP003,SKU005,2026-W47,50,Liter,SYNTHETIC

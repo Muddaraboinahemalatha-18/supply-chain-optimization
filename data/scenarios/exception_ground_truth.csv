@@ -1,0 +1,6 @@
+ground_truth_id,scenario_id,issue_type,expected_label,expected_decision,explanation
+GT-EXC-001,EXC-001,INBOUND_DOUBLE_COUNT,INVALID,REJECT,Received inbound quantity is already included in the inventory snapshot but is added again.
+GT-EXC-002,EXC-002,UNAPPROVED_SUBSTITUTE,INVALID,REJECT,The proposed substitute SKU has no approved substitution relationship.
+GT-EXC-003,EXC-003,CAPACITY_EXCEEDED,INVALID,REJECT,Proposed purchase quantity of 50 exceeds the synthetic supplier capacity of 40.
+GT-EXC-004,EXC-004,MISSING_LEAD_TIME,INVALID,FLAG,The existing lead-time record is not effective on the synthetic planning date.
+GT-EXC-005,EXC-005,UOM_MISMATCH,INVALID,REJECT,The proposed supply unit Liter does not match the demand and inventory unit Kg and no conversion is available.

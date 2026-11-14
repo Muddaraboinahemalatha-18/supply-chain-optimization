@@ -1,0 +1,6 @@
+scenario_id,sku_id,location_id,supplier_id,planning_week,planning_date,base_available_quantity,received_inbound_quantity,inbound_included_in_snapshot,additional_inbound_quantity,projected_available_quantity,original_sku_id,substitute_sku_id,substitute_relationship_exists,substitute_approved,substitute_conversion_factor,proposed_quantity,capacity_quantity,capacity_source,lead_time_record_exists,lead_time_days,lead_time_effective_from,lead_time_effective_to,demand_unit,inventory_unit,supply_unit,unit_conversion_available
+VAL-001,SKU001,LOC001,SUP001,2026-W47,2026-11-13,600,150,true,0,600,,,,,,,,,,,,,,,,
+VAL-002,SKU001,LOC001,,2026-W47,2026-11-13,,,,,,SKU001,SKU002,true,true,1,20,,,,,,,Kg,Kg,Kg,false
+VAL-003,SKU001,LOC001,SUP001,2026-W47,2026-11-13,,,,,,,,,,,40,40,SYNTHETIC,,,,,Kg,Kg,Kg,
+VAL-004,SKU001,LOC001,SUP001,2026-W47,2026-11-13,,,,,,,,,,,,,,true,2,2026-01-01,,Kg,Kg,Kg,
+VAL-005,SKU001,LOC001,SUP001,2026-W47,2026-11-13,,,,,,,,,,,10,,,,,,,Kg,Kg,Kg,false

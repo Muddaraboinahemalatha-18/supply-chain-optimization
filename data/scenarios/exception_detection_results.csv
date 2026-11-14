@@ -1,0 +1,6 @@
+scenario_id,detected_issue_type,detected_decision,detection_reason
+EXC-001,INBOUND_DOUBLE_COUNT,REJECT,Received inbound is already included in the inventory snapshot.
+EXC-002,UNAPPROVED_SUBSTITUTE,REJECT,Substitute SKU does not have an approved relationship.
+EXC-003,CAPACITY_EXCEEDED,REJECT,Proposed quantity 50.0 exceeds capacity 40.0.
+EXC-004,MISSING_LEAD_TIME,FLAG,No effective lead-time record exists on the planning date.
+EXC-005,UOM_MISMATCH,REJECT,Supply unit differs and no unit conversion is available.

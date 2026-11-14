@@ -1,0 +1,4 @@
+substitute_id,original_sku_id,substitute_sku_id,is_approved,conversion_factor,effective_from,effective_to
+SUB-2026-000001,SKU-000026,SKU-000012,1,1.0,2026-01-01,
+SUB-2026-000002,SKU-000024,SKU-000008,1,1.0,2026-01-01,
+SUB-2026-000003,SKU-000008,SKU-000023,1,1.0,2026-01-01,

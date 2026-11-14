@@ -1,0 +1,6 @@
+forecast_id,sku_id,location_id,unit,demand,available_stock,projected_balance,calculated_shortage,shortage_id,shortage_status,recommended_quantity,excess_recommended_quantity
+F006,SKU001,LOC001,Kg,620.0,600.0,-20.0,20.0,SHORT-2026-000001,PROJECTED,50.0,30.0
+F007,SKU002,LOC001,Kg,260.0,280.0,20.0,0,NONE,NO_SHORTAGE,0,0
+F008,SKU003,LOC002,Kg,320.0,300.0,-20.0,20.0,SHORT-2026-000002,PROJECTED,25.0,5.0
+F009,SKU004,LOC002,Liter,110.0,140.0,30.0,0,NONE,NO_SHORTAGE,0,0
+F010,SKU005,LOC003,Liter,160.0,150.0,-10.0,10.0,SHORT-2026-000003,PROJECTED,10.0,0

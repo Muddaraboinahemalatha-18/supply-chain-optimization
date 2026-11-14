@@ -1,0 +1,6 @@
+location_id,location_name,location_type,city,state
+LOC-000001,Distribution Center 001,WAREHOUSE,Hyderabad,Telangana
+LOC-000002,Distribution Center 002,WAREHOUSE,Vijayawada,Andhra Pradesh
+LOC-000003,Distribution Center 003,WAREHOUSE,Visakhapatnam,Andhra Pradesh
+LOC-000004,Distribution Center 004,WAREHOUSE,Bengaluru,Karnataka
+LOC-000005,Distribution Center 005,WAREHOUSE,Chennai,Tamil Nadu

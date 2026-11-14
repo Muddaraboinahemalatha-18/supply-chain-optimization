@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supply Chain Optimization | Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">SC</div>
+                <div>
+                    <h2>SupplyChain</h2>
+                    <p>OPTIMIZATION SYSTEM</p>
+                </div>
+            </div>
+
+            <div class="menu-label">MAIN MENU</div>
+
+            <nav class="navigation">
+                <a href="#dashboard" class="nav-link active">
+                    <span>▦</span> Dashboard
+                </a>
+                <a href="#inventory" class="nav-link">
+                    <span>▤</span> Inventory
+                </a>
+                <a href="#demand" class="nav-link">
+                    <span>⌁</span> Demand Forecast
+                </a>
+                <a href="#shortages" class="nav-link">
+                    <span>⚠</span> Shortages
+                </a>
+                <a href="#production" class="nav-link">
+                    <span>⚙</span> Production Planning
+                </a>
+                <a href="#mitigation" class="nav-link">
+                    <span>⇄</span> Mitigation
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="system-status">
+                    <span class="status-dot"></span>
+                    <div>
+                        <strong>System Status</strong>
+                        <small>Dashboard interface ready</small>
+                    </div>
+                </div>
+                <p class="sidebar-footer">Supply Chain Optimization</p>
+            </div>
+        </aside>
+
+        <main class="main-content" id="dashboard">
+
+            <header class="topbar">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Supply chain performance overview</p>
+                </div>
+
+                <div class="topbar-right">
+                    <span class="date-label" id="currentDate">Loading date...</span>
+                    <div class="profile">SC</div>
+                </div>
+            </header>
+
+            <section class="welcome-section">
+                <div>
+                    <h2>Welcome to Supply Chain Analytics</h2>
+                    <p>
+                        Monitor inventory, forecast demand, identify shortages,
+                        and review production and mitigation plans.
+                    </p>
+                </div>
+                <div class="welcome-icon">📊</div>
+            </section>
+
+            <section class="section-heading">
+                <div>
+                    <h2>Key Performance Indicators</h2>
+                    <p>Live project metrics will appear here after backend integration.</p>
+                </div>
+            </section>
+
+            <section class="kpi-grid">
+
+                <div class="kpi-card">
+                    <div class="kpi-top">
+                        <span>Total SKUs</span>
+                        <div class="kpi-icon blue">▦</div>
+                    </div>
+                    <h3 id="totalSkus">—</h3>
+                    <p>Products in the system</p>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-top">
+                        <span>Locations</span>
+                        <div class="kpi-icon purple">⌖</div>
+                    </div>
+                    <h3 id="totalLocations">—</h3>
+                    <p>Supply chain locations</p>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-top">
+                        <span>Suppliers</span>
+                        <div class="kpi-icon green">♧</div>
+                    </div>
+                    <h3 id="totalSuppliers">—</h3>
+                    <p>Registered suppliers</p>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-top">
+                        <span>Shortage Records</span>
+                        <div class="kpi-icon orange">⚠</div>
+                    </div>
+                    <h3 id="totalShortages">—</h3>
+                    <p>Projected shortage records</p>
+                </div>
+
+            </section>
+
+            <section class="charts-grid">
+
+                <div class="panel chart-panel" id="demand">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Demand Overview</h3>
+                            <p>Weekly demand trend</p>
+                        </div>
+                        <span class="panel-tag">Weekly</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="demandChart"></canvas>
+                        <p class="chart-placeholder" id="demandPlaceholder">
+                            Demand data will appear after backend integration.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="panel chart-panel" id="inventory">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Inventory Overview</h3>
+                            <p>Inventory status distribution</p>
+                        </div>
+                        <span class="panel-tag">Inventory</span>
+                    </div>
+                    <div class="chart-container doughnut-container">
+                        <canvas id="inventoryChart"></canvas>
+                        <p class="chart-placeholder" id="inventoryPlaceholder">
+                            Inventory data will appear after backend integration.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="panel table-panel" id="shortages">
+                <div class="panel-heading">
+                    <div>
+                        <h3>Recent Projected Shortages</h3>
+                        <p>Shortage records from the planning system</p>
+                    </div>
+                    <span class="panel-tag">Shortages</span>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>SKU ID</th>
+                                <th>Location ID</th>
+                                <th>Forecast Week</th>
+                                <th>Shortage Quantity</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="shortageTable">
+                            <tr>
+                                <td colspan="5" class="empty-message">
+                                    Shortage records will appear after backend integration.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bottom-grid">
+
+                <div class="panel information-panel" id="production">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Production Planning</h3>
+                            <p>Production and capacity information</p>
+                        </div>
+                    </div>
+                    <div class="info-placeholder">
+                        <div class="info-icon">⚙</div>
+                        <p>Production plan data will be connected here.</p>
+                    </div>
+                </div>
+
+                <div class="panel information-panel" id="mitigation">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Mitigation Recommendations</h3>
+                            <p>Suggested shortage resolution options</p>
+                        </div>
+                    </div>
+                    <div class="info-placeholder">
+                        <div class="info-icon">⇄</div>
+                        <p>Mitigation recommendations will be connected here.</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <footer class="main-footer">
+                Supply Chain Optimization System
+                <span>Project Dashboard</span>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+
+</html>
